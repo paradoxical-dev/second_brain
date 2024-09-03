@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5986a7e14d9b0f57",
+        "id": "e34e6b0be40d2a69",
         "type": "tabs",
         "children": [
           {
-            "id": "cdc096879b67f7bb",
+            "id": "5261a673f629f1af",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -139,8 +139,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cdc096879b67f7bb",
+  "active": "5261a673f629f1af",
   "lastOpenFiles": [
+    "literature notes/misc/tables_as_classes_lua.md",
     "literature notes/misc/spread_operator_js.md",
     "literature notes/misc/Set_js.md",
     "literature notes/misc/map_js.md",

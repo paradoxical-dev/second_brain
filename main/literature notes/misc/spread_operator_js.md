@@ -4,11 +4,11 @@ aliases: []
 tags: []
 ---
 
-#Summary
+# Summary
     the spread operator `...` allows an iterable to be expanded in places where
     zero or more arguments or elements are expected.
 
-#In Arrays
+# In Arrays
 - Converting to array
 ```javascript
 const mySet = new Set([1,2,3]);
