@@ -109,3 +109,8 @@ Need to rework how code blocks are handled from within the streamed response han
 - Need to add an optional feature to have cursor follow streamed response as well as having the cursor auto load to the bottom of the conversation
 - Also need a feature to resize the layout upon editor resizing to maintain useability
 - Once these features are added the project can be refactored for production and the integration of the builtin web surfing agent and custom tools can be performed
+
+# 9/27/24
+Lost a ton of notes and documentation on the project up to now since I'm a dumbass. Reformatted the entire drive on my kali install and lost a majority of my notes. Thankfully the necessary projects were hosted on github.
+
+On another note the fresh drive allowed me to get a clean arch install which is pretty nice. I was able to test the plugin on a fresh install and workout some potential bugs but overall it works great. What's left is to work out the custom web agent and write out the docs. I'm not 100% on how to implement the web agent using lua as the only videos I've seen have used the python packages for Ollama or use hugging face to distribute the communication between models which is necessary for the agent creation. I could potentially create an external file which is executed through the plugin but i'm unsure of the implications of this method.
