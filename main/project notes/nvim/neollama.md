@@ -111,6 +111,10 @@ Need to rework how code blocks are handled from within the streamed response han
 - Once these features are added the project can be refactored for production and the integration of the builtin web surfing agent and custom tools can be performed
 
 # 9/27/24
-Lost a ton of notes and documentation on the project up to now since I'm a dumbass. Reformatted the entire drive on my kali install and lost a majority of my notes. Thankfully the necessary projects were hosted on github.
+Reformatted the entire drive on my kali install and lost a majority of my notes. Thankfully the necessary projects were hosted on github.
 
 On another note the fresh drive allowed me to get a clean arch install which is pretty nice. I was able to test the plugin on a fresh install and workout some potential bugs but overall it works great. What's left is to work out the custom web agent and write out the docs. I'm not 100% on how to implement the web agent using lua as the only videos I've seen have used the python packages for Ollama or use hugging face to distribute the communication between models which is necessary for the agent creation. I could potentially create an external file which is executed through the plugin but i'm unsure of the implications of this method.
+
+As for the web agent, I think the best option is to implement a python script to facilitate the RAG operations since it won't be fully possible from within the native tools. This option will be extremely slow so I'm gonna keep thinking of alternatives. I have a map for a general direction here: [[Ollama Web Agent.canvas|Ollama Web Agent]]
+
+I could potentially restructure the scripts from the referenced videos into lua but i'm not sure how well that would work. I could potentially route the prompt first through an agent which decides whether it should search the web or not, then routing it to either the standard model or through the webscraper agent.
