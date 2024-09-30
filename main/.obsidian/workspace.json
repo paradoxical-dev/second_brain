@@ -16,10 +16,18 @@
                 "file": "literature notes/videos/Ollama Web Agent.canvas",
                 "viewState": {
                   "x": -99.5,
-                  "y": 1872.001247347705,
+                  "y": 1521.1847589729787,
                   "zoom": -1.067417071149545
                 }
               }
+            }
+          },
+          {
+            "id": "c7698781190c2c7e",
+            "type": "leaf",
+            "state": {
+              "type": "cm-changelog-view",
+              "state": {}
             }
           },
           {
@@ -96,8 +104,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e4968f5192ec5481",
@@ -172,7 +179,8 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "templater-obsidian:Templater": false
     }
   },
   "active": "c1930398f01e840a",

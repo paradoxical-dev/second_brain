@@ -1,4 +1,7 @@
 [
   "obsidian-wakatime",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "canvas-mindmap",
+  "dataview",
+  "templater-obsidian"
 ]
