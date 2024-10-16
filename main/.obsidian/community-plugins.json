@@ -3,5 +3,8 @@
   "obsidian-excalidraw-plugin",
   "canvas-mindmap",
   "dataview",
-  "templater-obsidian"
+  "templater-obsidian",
+  "obsidian-style-settings",
+  "obsidian-desmos",
+  "calendar"
 ]

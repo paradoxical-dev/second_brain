@@ -118,3 +118,28 @@ On another note the fresh drive allowed me to get a clean arch install which is 
 As for the web agent, I think the best option is to implement a python script to facilitate the RAG operations since it won't be fully possible from within the native tools. This option will be extremely slow so I'm gonna keep thinking of alternatives. I have a map for a general direction here: [[Ollama Web Agent.canvas|Ollama Web Agent]]
 
 I could potentially restructure the scripts from the referenced videos into lua but i'm not sure how well that would work. I could potentially route the prompt first through an agent which decides whether it should search the web or not, then routing it to either the standard model or through the webscraper agent.
+
+# 10/7/24
+Decided to try and build the agent using native lua tools. Ideally the functionality will work by having each inner agent generate responses in JSON and using the responses to facilitate the next options.This option will still be slow but I believe this is the best option for building the functionality within neovim.
+
+Currently I have the initial inner agent designed which is responsible for deciding whether the current user prompt requires up to date information and providing potential queries if so. It seems to work most times but has some hiccups. I don't think these are avoidable when using a LLM to generate the response so most of the time is good enough.
+
+The next steps are to create the actual web scraper to provide scraped content as well as the further facilitating agents for deciding on feedback and creating the overall schema. So far things are looking good.
+
+# 10/8/24
+Finally found a web search api to use with a reasonable free rate limit. It's fucking disgusting how much these companies try to charge for even non commercial use of their APIs. I decided to go with the Real-Time Web Search API provided on rapid api (found [here][https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-web-search])
+
+It still isn't perfect but that's the reality of living in a capitalistic dystopia. Additionally I'm not going to add support for other search APIs cus fuck that
+
+**IMPORTANT**
+Decided to use the ddgr package over an api. I'll have to capture the response of the command using the same plenary job method (response must be in json). After, the response should return the top results and their URLs. This is actually advantageous over the APIs since ddgr will allow me to see the full URLs and short descriptions of their content for the LLM analysis while not needing to worry about rate limits or pricing. fuck yea.
+
+# 10/15/24
+Have almost complete the web agent but I think it needs a restructure from my original plan. Rather than sending the model to a reviewing agent I think I should do this:
+- Scrape the picked URL from the `site_picker` function
+- Send the scraped content to a compilation agent which would be responsible for compressing the info to only contain relevant pieces
+	- This information will be stored to add  onto with later searches
+- Send the compressed information over to the reviewing agent which will respond in a JSON object determining whether or not the provided information is enough to answer the user prompt
+	- If the information is not enough we will use the next generated query from the buffer agent and repeat the process of scraping and compiling, adding the new information to the one stored from the initial call. This process will be repeated until the information is adequate for answering the prompt
+	- If the information is sufficient then the content will be sent to the integration agent which will create a response for the user input using the given content
+- The integration agent will act as the standard `ollamaCall` function with it's response handled the same, however, it's final output will be added to the chat memory of the main model for memory retention and chat continuity

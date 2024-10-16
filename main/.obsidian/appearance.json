@@ -1,4 +1,6 @@
 {
-  "accentColor": "#41b995",
-  "baseFontSize": 20
+  "accentColor": "",
+  "baseFontSize": 20,
+  "cssTheme": "AnuPpuccin",
+  "theme": "obsidian"
 }

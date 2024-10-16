@@ -16,17 +16,15 @@
      - Textbook: *Introduction to Computer Science Using Python: A Computational Problem-Solving Focus* by Charles Dierbach
      - Online Course: Harvard's CS50 on [edX](https://www.edx.org/course/cs50s-introduction-to-computer-science)
 
-**2. Discrete Mathematics**
+**2. Linear Algebra**
    - **Topics**:
-     - Logic and proofs
-     - Set theory
-     - Functions and relations
-     - Combinatorics
-     - Graph theory
-     - Number theory
+     - Matrices and determinants
+     - Vector spaces
+     - Eigenvalues and eigenvectors
+     - Linear transformations
    - **Resources**:
-     - Textbook: *Discrete Mathematics and Its Applications* by Kenneth H. Rosen
-     - Online Course: *Mathematics for Computer Science* on MIT OpenCourseWare
+     - Textbook: *Linear Algebra and Its Applications* by David C. Lay, Steven R. Lay, and Judi J. McDonald
+     - Online Course: *Linear Algebra* on Khan Academy
 
 **3. Calculus I**
    - **Topics**:
@@ -72,15 +70,17 @@
      - Textbook: *Calculus: Early Transcendentals* by James Stewart
      - Online Course: *Multivariable Calculus* on MIT OpenCourseWare
 
-**3. Linear Algebra**
+**3. Discrete Mathematics**
    - **Topics**:
-     - Matrices and determinants
-     - Vector spaces
-     - Eigenvalues and eigenvectors
-     - Linear transformations
+     - Logic and proofs
+     - Set theory
+     - Functions and relations
+     - Combinatorics
+     - Graph theory
+     - Number theory
    - **Resources**:
-     - Textbook: *Linear Algebra and Its Applications* by David C. Lay, Steven R. Lay, and Judi J. McDonald
-     - Online Course: *Linear Algebra* on Khan Academy
+     - Textbook: *Discrete Mathematics and Its Applications* by Kenneth H. Rosen
+     - Online Course: *Mathematics for Computer Science* on MIT OpenCourseWare
 
 **4. Digital Logic and Computer Architecture**
    - **Topics**:
