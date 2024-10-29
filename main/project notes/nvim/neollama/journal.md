@@ -1,7 +1,10 @@
 ---
 id: neollama
-aliases: []
-tags: []
+aliases: 
+tags:
+  - neollama
+  - Lua
+  - Ollama
 ---
 
 # 07/05/24
@@ -143,3 +146,12 @@ Have almost complete the web agent but I think it needs a restructure from my or
 	- If the information is not enough we will use the next generated query from the buffer agent and repeat the process of scraping and compiling, adding the new information to the one stored from the initial call. This process will be repeated until the information is adequate for answering the prompt
 	- If the information is sufficient then the content will be sent to the integration agent which will create a response for the user input using the given content
 - The integration agent will act as the standard `ollamaCall` function with it's response handled the same, however, it's final output will be added to the chat memory of the main model for memory retention and chat continuity
+
+# 10/16/24
+Completed the initial implementation of the web agent. The agent is capable of scraping multiple sites if need be from a feedback loop and the final compiled response can be handled as a standard model output for the user. The next steps are as follows:
+- Create a visual buffer to notate when the searches are taking place
+- Somehow attach the used queries and sources to the end of the final response
+- Possibly fine tune the models or system prompts to better handle their required tasks
+
+# 10/17/24
+I have a source concept for the source appending from the integration agent. Implementation should be simple now. I want it to have specific markdown elements such as bullets or linked words so ill have to move it to a loop style function to read each value of the passed source or query.
